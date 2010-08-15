@@ -81,7 +81,7 @@ int main(int argc,char **argv){
 	}
 
 	if(verbose)
-		fprintf(stderr,"File %s opened, setting length to %lld byte.",
+		fprintf(stderr,"File %s opened, setting length to %lld byte.\n",
 			fname,fsize);
 
 	if(-1 == ftruncate(fd,fsize)){
