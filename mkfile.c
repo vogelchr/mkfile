@@ -42,7 +42,7 @@ get_size_factor(char c){
 
 int main(int argc,char **argv){
 	int fd,i;
-	int verbose;
+	int verbose=0;
 	char *fname,*p;
 	off_t fsize,factor=1;
 
