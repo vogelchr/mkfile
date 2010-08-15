@@ -1,0 +1,39 @@
+SUMMARY:
+
+This is a quick and dirty copy of Solaris' mkfile command, initially
+written for Linux, but it should compile under any recent Unix.
+
+It is used to make a empty file of specified size, e.g...
+
+	$ mkfile -G 100 foo ; ls -l foo
+	-rw-r--r-- 1 chris users 107374182400 2010-08-15 19:41 foo
+
+USAGE:
+	$ mkfile -h
+	Usage: mkfile [options] size file
+	Create a sparse file of specific size.
+	If unit is not specified, size is in bytes.
+	Options:
+	  -v : verbose
+	  -h : this help
+	Size factors (specify only one of -k,-M,-G,-T):
+	  -k : size is in kibibyte (2^10=1024 byte)
+	  -M : size is in Mibibyte (2^20=1048576 byte)
+	  -G : size is in Gibibyte (2^30=1073741824 byte)
+	  -T : size is in Tibibyte (2^40=1099511627776 byte)
+
+BUILDING:
+
+	just type make
+	make install will install the binary in /usr/local/bin,
+		the maual page will be copied to /local/share/man/man1
+
+	Compiles cleanly under:
+
+		Linux (Ubuntu Karmic)
+		OpenSolaris (b134 or so)
+
+AUTHOR:
+	This program has been written by Christian Vogel <vogelchr@vogel.cx>
+	It's put under the GPL V3 or later.
+
