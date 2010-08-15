@@ -18,9 +18,9 @@ USAGE:
 	  -h : this help
 	Size factors (specify only one of -k,-M,-G,-T):
 	  -k : size is in kibibyte (2^10=1024 byte)
-	  -M : size is in Mibibyte (2^20=1048576 byte)
+	  -M : size is in Mebibyte (2^20=1048576 byte)
 	  -G : size is in Gibibyte (2^30=1073741824 byte)
-	  -T : size is in Tibibyte (2^40=1099511627776 byte)
+	  -T : size is in Tebibyte (2^40=1099511627776 byte)
 
 BUILDING:
 

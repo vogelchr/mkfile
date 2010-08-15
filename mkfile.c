@@ -18,9 +18,9 @@ usage(char *argv0,char *error){
 		"  -h : this help\n"
 		"Size factors (specify only one of -k,-M,-G,-T):\n"
 		"  -k : size is in kibibyte (2^10=1024 byte)\n"
-		"  -M : size is in Mibibyte (2^20=1048576 byte)\n"
+		"  -M : size is in Mebibyte (2^20=1048576 byte)\n"
 		"  -G : size is in Gibibyte (2^30=1073741824 byte)\n"
-		"  -T : size is in Tibibyte (2^40=1099511627776 byte)\n");
+		"  -T : size is in Tebibyte (2^40=1099511627776 byte)\n");
 	exit(1);
 }
 
@@ -30,11 +30,11 @@ get_size_factor(char c){
 	case 'k':
 		return 1ULL<<10; /* kibibyte */
 	case 'M':
-		return 1ULL<<20; /* Mibibyte */
+		return 1ULL<<20; /* Mebibyte */
 	case 'G':
 		return 1ULL<<30; /* Gibibyte */
 	case 'T':
-		return 1ULL<<40; /* Tibibyte */
+		return 1ULL<<40; /* Tebibyte */
 	default:
 		return -1;
 	}
