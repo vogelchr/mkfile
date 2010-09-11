@@ -53,6 +53,7 @@ int main(int argc,char **argv){
 			break;
 		case 'h':
 			usage(argv[0],NULL);
+			break;
 		case 'k':
 		case 'M':
 		case 'G':
@@ -61,6 +62,8 @@ int main(int argc,char **argv){
 				usage(argv[0],"Specify only one size factor!");
 			factor = get_size_factor(i);
 			break;
+		default:
+			exit(1); /* invalid option specified */
 		}
 	}
 
